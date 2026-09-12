@@ -2,27 +2,20 @@
   --primary: #123b73;
   --primary-dark: #09284f;
   --primary-light: #eaf2fb;
-
   --accent: #e63946;
   --accent-dark: #c92f3b;
   --accent-light: #fff1f2;
-
   --text: #172033;
   --text-light: #667085;
   --white: #ffffff;
-
   --background: #f4f7fb;
   --card: #ffffff;
   --border: #dfe5ee;
-
   --success: #16a34a;
   --success-bg: #ecfdf3;
-
   --danger: #dc2626;
   --danger-bg: #fef2f2;
-
   --shadow: 0 10px 30px rgba(15, 43, 77, 0.08);
-
   --sans: "Segoe UI", Roboto, Arial, sans-serif;
 
   font-family: var(--sans);
@@ -98,11 +91,9 @@ button:focus-visible {
   width: min(1180px, calc(100% - 40px));
   min-height: 76px;
   margin: 0 auto;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   gap: 20px;
 }
 
@@ -115,14 +106,11 @@ button:focus-visible {
 .university-logo {
   width: 48px;
   height: 48px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   border-radius: 8px;
   background: var(--primary);
-
   color: var(--white);
   font-size: 22px;
   font-weight: 800;
@@ -148,12 +136,9 @@ button:focus-visible {
 
 .header-badge {
   padding: 8px 14px;
-
   border-radius: 6px;
-
   background: var(--primary-light);
   color: var(--primary);
-
   font-size: 13px;
   font-weight: 700;
 }
@@ -178,9 +163,7 @@ button:focus-visible {
 
 .quiz-intro h1 {
   margin: 0 0 8px;
-
   color: var(--primary);
-
   font-size: 34px;
   line-height: 1.2;
   font-weight: 750;
@@ -189,9 +172,7 @@ button:focus-visible {
 
 .quiz-intro p {
   margin: 0;
-
   color: var(--text-light);
-
   font-size: 15px;
 }
 
@@ -201,12 +182,9 @@ button:focus-visible {
 
 .quiz-card {
   background: var(--card);
-
   border: 1px solid var(--border);
   border-radius: 12px;
-
   box-shadow: var(--shadow);
-
   overflow: hidden;
 }
 
@@ -216,18 +194,15 @@ button:focus-visible {
 
 .quiz-card-top {
   padding: 22px 28px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   border-bottom: 1px solid var(--border);
   background: #fbfcfe;
 }
 
 .question-number {
   color: var(--primary);
-
   font-size: 14px;
   font-weight: 700;
 }
@@ -239,12 +214,9 @@ button:focus-visible {
 
 .score-badge {
   padding: 7px 13px;
-
   border-radius: 6px;
-
   background: var(--primary-light);
   color: var(--primary);
-
   font-size: 13px;
   font-weight: 700;
 }
@@ -261,17 +233,13 @@ button:focus-visible {
 .progress-background {
   width: 100%;
   height: 6px;
-
   background: #e7ebf1;
-
   overflow: hidden;
 }
 
 .progress-fill {
   height: 100%;
-
   background: var(--accent);
-
   transition: width 0.3s ease;
 }
 
@@ -285,9 +253,7 @@ button:focus-visible {
 
 .question-content h2 {
   margin: 0 0 25px;
-
   color: var(--text);
-
   font-size: 23px;
   line-height: 1.45;
   font-weight: 700;
@@ -305,28 +271,18 @@ button:focus-visible {
 
 .option {
   width: 100%;
-
   display: flex;
   align-items: center;
-
   gap: 14px;
-
   padding: 15px 17px;
-
   border: 1px solid var(--border);
   border-radius: 8px;
-
   background: var(--white);
-
   color: var(--text);
-
   font-size: 15px;
   line-height: 1.4;
-
   text-align: left;
-
   cursor: pointer;
-
   transition:
     border-color 0.2s ease,
     background 0.2s ease,
@@ -336,11 +292,8 @@ button:focus-visible {
 
 .option:hover:not(:disabled) {
   border-color: var(--primary);
-
   background: #f8fbff;
-
   box-shadow: 0 3px 10px rgba(18, 59, 115, 0.07);
-
   transform: translateY(-1px);
 }
 
@@ -351,25 +304,21 @@ button:focus-visible {
 .option-number {
   width: 34px;
   height: 34px;
-
   min-width: 34px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   border: 1px solid #ccd5e1;
   border-radius: 50%;
-
   background: #f8fafc;
-
   color: var(--primary);
-
   font-size: 14px;
   font-weight: 750;
 }
 
-/* Correct answer */
+/* =========================
+   CORRECT ANSWER
+========================= */
 
 .option.correct {
   border-color: var(--success);
@@ -383,7 +332,9 @@ button:focus-visible {
   color: white;
 }
 
-/* Wrong answer */
+/* =========================
+   WRONG ANSWER
+========================= */
 
 .option.wrong {
   border-color: var(--danger);
@@ -398,18 +349,82 @@ button:focus-visible {
 }
 
 /* =========================
+   ANSWER EXPLANATION
+========================= */
+
+.answer-explanation {
+  margin-top: 24px;
+  padding: 18px 20px;
+  border-radius: 12px;
+  background: #f8fafc;
+  border: 1px solid #dbe3ee;
+  animation: explanationFadeIn 0.3s ease;
+}
+
+.answer-explanation span {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #1e3a8a;
+}
+
+.answer-explanation p {
+  margin: 8px 0 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #475569;
+}
+
+.answer-explanation p strong {
+  color: #166534;
+  font-weight: 700;
+}
+
+/* Correct explanation */
+
+.answer-explanation.explanation-correct {
+  border-color: #bbf7d0;
+  background: #f0fdf4;
+}
+
+.answer-explanation.explanation-correct span {
+  color: #166534;
+}
+
+/* Wrong explanation */
+
+.answer-explanation.explanation-wrong {
+  border-color: #fecaca;
+  background: #fff7f7;
+}
+
+.answer-explanation.explanation-wrong span {
+  color: #991b1b;
+}
+
+@keyframes explanationFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
    QUIZ FOOTER
 ========================= */
 
 .quiz-footer {
   padding: 20px 28px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   border-top: 1px solid var(--border);
-
   background: #fbfcfe;
 }
 
@@ -430,39 +445,46 @@ button:focus-visible {
 }
 
 /* =========================
-   BUTTON
+   PREVIOUS + NEXT BUTTONS
 ========================= */
 
+.previous-button,
 .next-button {
-  min-width: 150px;
-
-  padding: 12px 20px;
-
+  min-width: 155px;
+  padding: 13px 22px;
   border: none;
-  border-radius: 7px;
-
-  background: var(--primary);
-
-  color: white;
-
+  border-radius: 8px;
+  background: #0f172a;
+  color: #ffffff;
   font-size: 14px;
   font-weight: 700;
-
   cursor: pointer;
-
   transition:
     background 0.2s ease,
     transform 0.15s ease;
 }
 
+.previous-button:hover:not(:disabled),
 .next-button:hover:not(:disabled) {
-  background: var(--primary-dark);
+  background: #020617;
   transform: translateY(-1px);
 }
 
+.previous-button:disabled,
 .next-button:disabled {
   opacity: 0.45;
   cursor: not-allowed;
+  transform: none;
+}
+
+/* =========================
+   BUTTON CONTAINER
+========================= */
+
+.navigation-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 /* =========================
@@ -471,61 +493,43 @@ button:focus-visible {
 
 .result-card {
   width: min(650px, 100%);
-
   margin: 60px auto 0;
-
   padding: 50px 40px;
-
   background: var(--white);
-
   border: 1px solid var(--border);
   border-radius: 14px;
-
   box-shadow: var(--shadow);
-
   text-align: center;
 }
 
 .result-icon {
   width: 70px;
   height: 70px;
-
   margin: 0 auto 20px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   border-radius: 50%;
-
   background: var(--primary-light);
-
   color: var(--primary);
-
   font-size: 32px;
 }
 
 .result-card h1 {
   margin: 0 0 10px;
-
   color: var(--primary);
-
   font-size: 32px;
 }
 
 .result-card p {
   margin: 0;
-
   color: var(--text-light);
-
   font-size: 15px;
 }
 
 .final-score {
   margin: 25px 0;
-
   color: var(--primary);
-
   font-size: 60px;
   line-height: 1;
   font-weight: 800;
@@ -533,17 +537,93 @@ button:focus-visible {
 
 .final-score span {
   color: var(--text-light);
-
   font-size: 24px;
   font-weight: 500;
 }
 
 .result-message {
   margin-bottom: 30px !important;
-
   font-size: 17px !important;
   font-weight: 600;
   color: var(--text) !important;
+}
+
+/* =========================
+   RESULT REVIEW
+========================= */
+
+.review-section {
+  width: min(1000px, calc(100% - 40px));
+  margin: 40px auto 70px;
+}
+
+.review-section h2 {
+  margin: 0 0 20px;
+  color: var(--primary);
+  font-size: 24px;
+  font-weight: 750;
+}
+
+.review-card {
+  margin-bottom: 18px;
+  padding: 24px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 5px 18px rgba(15, 43, 77, 0.06);
+}
+
+.review-card:last-child {
+  margin-bottom: 0;
+}
+
+.review-card h3 {
+  margin: 0 0 15px;
+  color: var(--text);
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.review-card p {
+  margin: 8px 0;
+  color: var(--text-light);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.review-card p strong {
+  color: var(--text);
+}
+
+.review-card.review-correct {
+  border-left: 4px solid var(--success);
+}
+
+.review-card.review-wrong {
+  border-left: 4px solid var(--danger);
+}
+
+/* Review explanation */
+
+.review-card .answer-explanation {
+  margin-top: 20px;
+  background: #f8fafc;
+}
+
+.review-card.review-correct .answer-explanation {
+  border-left: 4px solid var(--success);
+}
+
+.review-card.review-wrong .answer-explanation {
+  border-left: 4px solid var(--danger);
+}
+
+.review-card .answer-explanation span {
+  color: #1e293b;
+}
+
+.review-card .answer-explanation p {
+  color: #475569;
 }
 
 /* =========================
@@ -552,19 +632,13 @@ button:focus-visible {
 
 .restart-button {
   padding: 13px 28px;
-
   border: none;
   border-radius: 7px;
-
   background: var(--accent);
-
   color: white;
-
   font-size: 14px;
   font-weight: 700;
-
   cursor: pointer;
-
   transition:
     background 0.2s ease,
     transform 0.15s ease;
@@ -581,17 +655,11 @@ button:focus-visible {
 
 .site-footer {
   margin-top: auto;
-
   padding: 20px;
-
   border-top: 1px solid var(--border);
-
   background: var(--white);
-
   text-align: center;
-
   color: var(--text-light);
-
   font-size: 13px;
 }
 
@@ -612,7 +680,6 @@ button:focus-visible {
   .university-logo {
     width: 40px;
     height: 40px;
-
     font-size: 18px;
   }
 
@@ -658,6 +725,7 @@ button:focus-visible {
     padding: 17px 18px;
   }
 
+  .previous-button,
   .next-button {
     min-width: 125px;
     padding: 11px 15px;
@@ -666,6 +734,19 @@ button:focus-visible {
   .result-card {
     margin-top: 30px;
     padding: 40px 25px;
+  }
+
+  .review-section {
+    width: calc(100% - 24px);
+    margin: 30px auto 50px;
+  }
+
+  .review-card {
+    padding: 20px;
+  }
+
+  .answer-explanation {
+    padding: 16px;
   }
 }
 
@@ -701,59 +782,40 @@ button:focus-visible {
     font-size: 16px;
   }
 
+  .navigation-buttons {
+    gap: 6px;
+  }
+
+  .previous-button,
   .next-button {
-    min-width: 115px;
+    min-width: 105px;
+    padding: 10px 12px;
     font-size: 13px;
   }
 
   .final-score {
     font-size: 50px;
   }
-}
-/* Previous + Next buttons have the SAME style */
 
-.previous-button,
-.next-button {
-  min-width: 155px;
-  padding: 13px 22px;
+  .review-card {
+    padding: 16px;
+  }
 
-  border: none;
-  border-radius: 8px;
+  .review-card h3 {
+    font-size: 16px;
+  }
 
-  background: #0f172a;
-  color: #ffffff;
+  .answer-explanation {
+    margin-top: 18px;
+    padding: 14px;
+  }
 
-  font-size: 14px;
-  font-weight: 700;
+  .answer-explanation span {
+    font-size: 15px;
+  }
 
-  cursor: pointer;
-
-  transition:
-    background 0.2s ease,
-    transform 0.15s ease;
-}
-
-/* Hover */
-
-.previous-button:hover:not(:disabled),
-.next-button:hover:not(:disabled) {
-  background: #020617;
-  transform: translateY(-1px);
-}
-
-/* Disabled */
-
-.previous-button:disabled,
-.next-button:disabled {
-  opacity: 0.45;
-  cursor: not-allowed;
-  transform: none;
-}
-
-/* Button container */
-
-.navigation-buttons {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  .answer-explanation p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
 }
